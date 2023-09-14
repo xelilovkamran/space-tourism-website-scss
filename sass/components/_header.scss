@@ -1,0 +1,134 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+
+  .image {
+    padding-left: 3.4rem;
+    width: 3rem;
+    height: 3rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  nav {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
+    z-index: 1;
+
+    ul {
+      font-family: "Barlow Condensed", sans-serif;
+      display: flex;
+      flex-direction: row;
+      padding: 0 6.25rem 0 7.5rem;
+
+      li {
+        padding-right: 3rem;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        a {
+          display: block;
+          padding: 1.6rem 0;
+          transition: all 0.5s;
+          font-size: 1rem;
+          line-height: 1rem;
+          letter-spacing: 2.7px;
+          border-bottom: 3px solid transparent;
+
+          span {
+            font-weight: 700;
+            margin-right: 10px;
+          }
+
+          &.active {
+            border-bottom-color: #fff;
+          }
+
+          &:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  i {
+    margin-right: 2rem;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  #header {
+    .image {
+      padding-left: 2.5rem;
+    }
+
+    nav {
+      ul {
+        padding: 0 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #header {
+    padding: 0;
+    nav ul li {
+      padding-right: 2.3rem;
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        padding: 2.5rem 0;
+        letter-spacing: 2.3px;
+        font-size: 1rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  #header {
+    padding-top: 1.25rem;
+
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+
+      ul {
+        padding-top: 9rem;
+        flex-direction: column;
+
+        li a {
+          border: none;
+          padding: 1.25rem 0;
+
+          span {
+            display: inline;
+          }
+        }
+      }
+    }
+
+    i {
+      display: inline;
+    }
+  }
+}

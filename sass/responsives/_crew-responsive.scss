@@ -1,0 +1,85 @@
+@media (max-width: 1100px) {
+  #crew-members {
+    padding: 1.8rem 3rem 0;
+  }
+}
+
+@media (max-width: 970px) {
+  .meet-crew {
+    padding-left: 2.5rem;
+  }
+
+  #crew-members {
+    padding: 1.8rem 1.8rem 0;
+  }
+}
+
+@media (max-width: 860px) {
+  body {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+
+  .meet-crew {
+    margin-bottom: 2.5rem;
+  }
+
+  #crew-members {
+    flex-direction: column;
+    @include center-element-without-flex;
+    gap: 3rem;
+
+    .crew-information {
+      max-width: 95%;
+
+      h4,
+      h3,
+      p {
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 2.5rem;
+      }
+
+      .page-buttons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  body {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+
+  .meet-crew {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+  #crew-members {
+    flex-direction: column-reverse;
+
+    .crew-information {
+      .page-buttons {
+        order: 1;
+        padding-bottom: 1.8rem;
+      }
+
+      h4 {
+        order: 2;
+      }
+      h3 {
+        order: 3;
+      }
+      p {
+        order: 4;
+      }
+    }
+
+    .member-image {
+      width: 100%;
+      border-bottom: 1px solid #fff;
+    }
+  }
+}

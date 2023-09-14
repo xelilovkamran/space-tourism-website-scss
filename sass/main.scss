@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import "config";
+@import "./components/header";
+
+@include prepare-page;
+
+body {
+  background-image: url(../assets/home/background-home-desktop.jpg);
+}
+
+#general-information {
+  margin: auto;
+  padding: 8.1rem 3rem 0 3.4rem;
+  max-width: $website-width;
+  @include separate-element;
+
+  .about-space {
+    max-width: 28rem;
+
+    h5 {
+      font-family: $primary-font-family;
+      font-size: 1.75rem;
+      color: $primary-color;
+      letter-spacing: 4.75px;
+      line-height: 2.1rem;
+    }
+
+    h1 {
+      margin: 1.5rem 0;
+      font-family: $secondary-font-family;
+      font-size: 9.4rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      line-height: 2rem;
+      font-family: $primary-font-family;
+      color: $primary-color;
+    }
+  }
+
+  .overlay {
+    width: 28rem;
+    height: 28rem;
+    box-sizing: border-box;
+    padding: 5.5rem;
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out;
+
+    .explore-space {
+      width: 17rem;
+      height: 17rem;
+
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      @include center-element;
+
+      h4 {
+        color: black;
+        font-size: 2rem;
+      }
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+@import "./responsives/main-responsive";

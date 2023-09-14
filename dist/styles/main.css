@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem; }
+  #header .image {
+    padding-left: 3.4rem;
+    width: 3rem;
+    height: 3rem; }
+    #header .image img {
+      height: 100%; }
+  #header nav {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40px);
+    z-index: 1; }
+    #header nav ul {
+      font-family: "Barlow Condensed", sans-serif;
+      display: flex;
+      flex-direction: row;
+      padding: 0 6.25rem 0 7.5rem; }
+      #header nav ul li {
+        padding-right: 3rem; }
+        #header nav ul li:last-child {
+          padding-right: 0; }
+        #header nav ul li a {
+          display: block;
+          padding: 1.6rem 0;
+          transition: all 0.5s;
+          font-size: 1rem;
+          line-height: 1rem;
+          letter-spacing: 2.7px;
+          border-bottom: 3px solid transparent; }
+          #header nav ul li a span {
+            font-weight: 700;
+            margin-right: 10px; }
+          #header nav ul li a.active {
+            border-bottom-color: #fff; }
+          #header nav ul li a:hover {
+            border-bottom-color: rgba(255, 255, 255, 0.5); }
+  #header i {
+    margin-right: 2rem;
+    display: none;
+    z-index: 2;
+    cursor: pointer; }
+
+@media (max-width: 1000px) {
+  #header .image {
+    padding-left: 2.5rem; }
+  #header nav ul {
+    padding: 0 3rem; } }
+
+@media (max-width: 800px) {
+  #header {
+    padding: 0; }
+    #header nav ul li {
+      padding-right: 2.3rem; }
+      #header nav ul li:last-child {
+        padding-right: 0; }
+      #header nav ul li a {
+        padding: 2.5rem 0;
+        letter-spacing: 2.3px;
+        font-size: 1rem; }
+        #header nav ul li a span {
+          display: none; } }
+
+@media (max-width: 580px) {
+  #header {
+    padding-top: 1.25rem; }
+    #header nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none; }
+      #header nav ul {
+        padding-top: 9rem;
+        flex-direction: column; }
+        #header nav ul li a {
+          border: none;
+          padding: 1.25rem 0; }
+          #header nav ul li a span {
+            display: inline; }
+    #header i {
+      display: inline; } }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: #fff;
+  text-decoration: none; }
+
+body,
+html {
+  min-height: 100vh; }
+
+body {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+body {
+  background-image: url(../assets/home/background-home-desktop.jpg); }
+
+#general-information {
+  margin: auto;
+  padding: 8.1rem 3rem 0 3.4rem;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #general-information .about-space {
+    max-width: 28rem; }
+    #general-information .about-space h5 {
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 1.75rem;
+      color: #d0d6f9;
+      letter-spacing: 4.75px;
+      line-height: 2.1rem; }
+    #general-information .about-space h1 {
+      margin: 1.5rem 0;
+      font-family: "Bellefair", sans-serif;
+      font-size: 9.4rem; }
+    #general-information .about-space p {
+      font-size: 1.15rem;
+      line-height: 2rem;
+      font-family: "Barlow Condensed", sans-serif;
+      color: #d0d6f9; }
+  #general-information .overlay {
+    width: 28rem;
+    height: 28rem;
+    box-sizing: border-box;
+    padding: 5.5rem;
+    border-radius: 50%;
+    transition: background 0.5s ease-in-out; }
+    #general-information .overlay .explore-space {
+      width: 17rem;
+      height: 17rem;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #general-information .overlay .explore-space h4 {
+        color: black;
+        font-size: 2rem; }
+    #general-information .overlay:hover {
+      background: rgba(255, 255, 255, 0.1); }
+
+@media (max-width: 900px) {
+  #general-information .overlay {
+    width: 20rem;
+    height: 20rem;
+    padding: 3rem; }
+    #general-information .overlay .explore-space {
+      width: 14rem;
+      height: 14rem; } }
+
+@media (max-width: 800px) {
+  html {
+    font-size: 14px; }
+  body {
+    background-image: url(../assets/home/background-home-tablet.jpg); }
+  #general-information {
+    flex-direction: column;
+    padding: 6.5rem 3rem 0 3rem;
+    gap: 8rem; }
+    #general-information .about-space {
+      text-align: center; }
+      #general-information .about-space h5 {
+        letter-spacing: 3.75px; } }
+
+@media (max-width: 420px) {
+  html {
+    font-size: 12px; }
+  #general-information .about-space h5 {
+    letter-spacing: 3px; } }

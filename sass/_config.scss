@@ -1,0 +1,52 @@
+// variables
+
+$website-width: 1440px;
+$primary-color: #d0d6f9;
+
+$primary-font-family: "Barlow Condensed", sans-serif;
+$secondary-font-family: "Bellefair", sans-serif;
+
+// mixins
+
+@mixin prepare-page {
+  * {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  body,
+  html {
+    min-height: 100vh;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+
+@mixin center-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin separate-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin column-direction {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin center-element-without-flex {
+  justify-content: center;
+  align-items: center;
+}

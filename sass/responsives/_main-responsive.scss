@@ -1,0 +1,51 @@
+@media (max-width: 900px) {
+  #general-information {
+    .overlay {
+      width: 20rem;
+      height: 20rem;
+
+      padding: 3rem;
+
+      .explore-space {
+        width: 14rem;
+        height: 14rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+  body {
+    background-image: url(../assets/home/background-home-tablet.jpg);
+  }
+
+  #general-information {
+    flex-direction: column;
+    padding: 6.5rem 3rem 0 3rem;
+    gap: 8rem;
+
+    .about-space {
+      text-align: center;
+
+      h5 {
+        letter-spacing: 3.75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 12px;
+  }
+  #general-information {
+    .about-space {
+      h5 {
+        letter-spacing: 3px;
+      }
+    }
+  }
+}

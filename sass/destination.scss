@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import "config";
+@import "./components/header";
+
+@include prepare-page;
+
+body {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+}
+
+.pick-destination {
+  padding-left: 8rem;
+  display: flex;
+  gap: 1.75rem;
+  margin-top: 4.3rem;
+  font-family: $primary-font-family;
+  font-size: 1.75rem;
+  line-height: 2rem;
+  letter-spacing: 4.7px;
+
+  span {
+    font-weight: 700;
+    opacity: 0.25;
+  }
+}
+
+#planet-destination {
+  margin: auto;
+  padding: 2rem 7.5rem 0;
+  max-width: $website-width;
+  @include separate-element;
+
+  .img-container {
+    img {
+      width: 21rem;
+      height: 21rem;
+    }
+  }
+
+  .planet-information {
+    max-width: 27.5rem;
+
+    .planet-list {
+      ul {
+        display: flex;
+        gap: 2rem;
+
+        li {
+          font-family: $primary-font-family;
+          line-height: 1rem;
+          letter-spacing: 2.7px;
+          cursor: pointer;
+          padding-bottom: 0.75rem;
+
+          &:hover {
+            color: $primary-color;
+            border-bottom: 3px solid $primary-color;
+          }
+
+          &.active {
+            border-bottom: 3px solid #ffffff;
+          }
+        }
+      }
+    }
+
+    h2 {
+      font-family: $secondary-font-family;
+      font-size: 6.25rem;
+      line-height: 7rem;
+      margin-top: 2.25rem;
+    }
+
+    p {
+      font-family: $primary-font-family;
+      line-height: 2rem;
+      color: $primary-color;
+      padding-bottom: 3.3rem;
+      border-bottom: 1px solid #383b4b;
+    }
+
+    .distance-time {
+      padding-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+
+      .distance,
+      .time {
+        @include column-direction;
+        flex: 1;
+        font-family: $primary-font-family;
+        font-size: 1rem;
+        line-height: 1rem;
+        letter-spacing: 2.4px;
+
+        span {
+          padding-top: 0.75rem;
+          font-family: $secondary-font-family;
+          font-size: 1.75rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@import "./responsives/destination-responsive";
