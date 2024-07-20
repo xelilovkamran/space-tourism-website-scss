@@ -1,4 +1,4 @@
-import data from "../data.json" assert { type: "json" };
+import data from "../data.json" with { type: "json" };
 
 const role = document.querySelector("#crew-members .crew-information h4");
 const name = document.querySelector("#crew-members .crew-information h3");
